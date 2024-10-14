@@ -39,7 +39,7 @@ class TelloController(Node):
         self.twist = Twist()
 
         # Load the dictionary and parameters for ArUco marker detection
-        self.aruco_dict = aruco.Dictionary_get(aruco.DICT_6X6_250)
+        self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_250)
         self.aruco_params = aruco.DetectorParameters_create()
 
          # Camera calibration parameters (Replace these with actual values from camera calibration)
